@@ -1,0 +1,21 @@
+.scroll-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border: 2px solid #ccc;
+  transition: background-color 0.4s, transform 0.4s;
+  width: 300px;
+}
+
+.scroll-sticky:hover {
+  background-color: #ff5722;
+  transform: scale(1.1);
+}
+
+.scroll-container {
+  height: 1500px;
+  padding: 50px;
+}
+

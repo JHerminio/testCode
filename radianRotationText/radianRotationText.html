@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Circular Gradient in Letter "O"</title>
+    <style>
+      .gradient-text {
+        font-size: 150px;
+        font-weight: bold;
+        background: radial-gradient(circle, red, yellow);
+        /* -webkit-background-clip: text; */
+        color: transparent;
+        display: inline-block;
+        margin: 50px;
+        animation: animation 5s infinite, rotate 10s linear infinite;
+      }
+
+      @keyframes animation {
+        0% {
+          /* background: radial-gradient(circle, red, yellow); */
+          transform: radial-gradient(0deg);
+          filter: drop-shadow(1px 1px 20px yellow);
+        }
+        100% {
+          /* background: radial-gradient(circle, red, yellow); */
+          transform: radial-gradient(360deg);
+        }
+      }
+      /* @keyframes animation {
+        from {
+          transform: radial-gradient(0deg);
+        }
+        to {
+          transform: radial-gradient(360deg);
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="gradient-text">Octro</div>
+  </body>
+</html>

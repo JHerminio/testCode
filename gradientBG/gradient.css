@@ -1,0 +1,89 @@
+.gradientContainer img {
+  width: 50%;
+  height: 50%;
+}
+
+/* .glowGold {
+  animation: glow 1s infinite alternate;
+}
+@keyframes glow {
+  0% {
+    filter: drop-shadow(1px 1px 10px yellow);
+  }
+  100% {
+    filter: drop-shadow(1px 1px 20px black);
+  }
+} */
+
+.glowGold2 {
+  background: linear-gradient(
+    183deg,
+    #f6f71e,
+    #433b0f,
+    #ffd700,
+    #433b0f,
+    #d9a937,
+    #433b0f,
+    #ffb300
+  );
+  background-size: 1400% 1400%;
+  /* background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; */
+
+  animation: gradientAnimation 10s infinite alternate;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  /* 0% {
+    filter: drop-shadow(1px 1px 10px yellow);
+  }
+  100% {
+    filter: drop-shadow(1px 1px 20px black);
+  } */
+  0% {
+    background-position: 52% 0%;
+  }
+  50% {
+    background-position: 49% 100%;
+  }
+  100% {
+    background-position: 52% 0%;
+  }
+}
+
+@-webkit-keyframes gradientAnimation {
+  0% {
+    background-position: 52% 0%;
+  }
+  50% {
+    background-position: 49% 100%;
+  }
+  100% {
+    background-position: 52% 0%;
+  }
+}
+@-moz-keyframes gradientAnimation {
+  0% {
+    background-position: 52% 0%;
+  }
+  50% {
+    background-position: 49% 100%;
+  }
+  100% {
+    background-position: 52% 0%;
+  }
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 52% 0%;
+  }
+  50% {
+    background-position: 49% 100%;
+  }
+  100% {
+    background-position: 52% 0%;
+  }
+}

@@ -1,0 +1,36 @@
+.h1AnimationColor {
+  text-align: center;
+  font-weight: 900;
+}
+
+.h1AnimationColor {
+  background: linear-gradient(270deg, #ff0000, #0000ff, #ffff00);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: AnimationColor 15s ease infinite;
+  -webkit-animation: AnimationColor 15s ease infinite;
+  -moz-animation: AnimationColor 15s ease infinite;
+  -o-animation: AnimationColor 15s ease infinite;
+}
+
+@keyframes AnimationColor {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.test {
+    text-align: center;
+    font-weight: 900;
+  
+    color:black;
+    animation: looping 10s linear 0s infinite none;
+}

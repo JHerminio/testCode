@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="rouletteGame.css" />
+  </head>
+  <body>
+    <div class="spin">
+      <input type="button" value="spin" style="float: left" id="spin" />
+      <div>
+        <canvas id="canvas" width="500" height="500"></canvas>
+      </div>
+      <div class="cta-container">
+        <img
+          src="your-image-url.jpg"
+          alt="Descriptive Alt Text"
+          class="cta-image"
+        />
+      </div>
+
+      <div class="slide">
+        <img
+          src="https://www.goldbet007.in/wp-content/uploads/2024/09/baccarat.webp"
+          alt=""
+          class=""
+        />
+        <img
+          src="https://www.goldbet007.in/wp-content/uploads/2024/09/baccarat.webp"
+          alt=""
+          class=""
+        />
+        <img
+          src="https://www.goldbet007.in/wp-content/uploads/2024/09/baccarat.webp"
+          alt=""
+          class=""
+        />
+        <img
+          src="https://www.goldbet007.in/wp-content/uploads/2024/09/baccarat.webp"
+          alt=""
+          class=""
+        />
+      </div>
+
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          background: #f2f2f2;
+          overflow: hidden; /* Prevents scrollbar from appearing */
+        }
+        .container {
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+        }
+        .carousel {
+          display: flex;
+          animation: animateCarousel 10s linear infinite;
+        }
+        .carousel img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          margin: 0 10px;
+        }
+        @keyframes animateCarousel {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      </style>
+    
+      
+    </div>
+    <script src="rouletteGame.js"></script>
+  </body>
+</html>
+
+

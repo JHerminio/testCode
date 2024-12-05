@@ -1,0 +1,66 @@
+<style>
+    #timer {
+        display: inline-block;
+      padding: 5px;
+      background-color: #f2f2f2;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 50px;
+      font-weight: 700;
+      min-width: 40px;
+      text-align: center;
+    }
+    #random-number {
+        display: inline-block;
+      padding: 5px;
+      background-color: #f2f2f2;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 50px;
+      font-weight: 700;
+      min-width: 40px;
+      text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<div id="timer">01:00</div>
+<div id="random-number"></div>
+
+<script>
+function startCountdown() {
+    var countdownTime = 5; // Countdown in seconds
+    var timerElement = document.getElementById("timer");
+    var randomNumberElement = document.getElementById("random-number");
+
+    var countdown = setInterval(function() {
+        var minutes = Math.floor(countdownTime / 60);
+        var seconds = countdownTime % 60;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        timerElement.textContent = minutes + ":" + seconds;
+
+        if (countdownTime === 0) {
+            clearInterval(countdown);
+
+            // Random Number Generator Logic
+            const numbers = new Set();
+            while (numbers.size < 5) {
+                const randomNum = Math.floor(Math.random() * 49) + 1; // Generate a number between 1 and 49
+                numbers.add(randomNum);
+            }
+
+            // Display the random numbers
+            randomNumberElement.textContent = "" + Array.from(numbers).join(", ");
+
+            // Restart the countdown after a short delay
+            setTimeout(startCountdown, 2000); // 2 seconds delay before restarting the countdown
+        }
+
+        countdownTime--;
+    }, 1000);
+}
+
+startCountdown(); // Start the initial countdown
+</script>

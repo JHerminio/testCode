@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Rotating Dice</title>
+    <style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.scene {
+  width: 50px;
+  height: auto;
+  perspective: 600px;
+}
+
+.cube {
+  width: 50px;
+  height: auto;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateDice 6s infinite;
+}
+
+.face {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+.cube img {
+  width: 50px;
+  height: auto;
+}
+.front {
+  transform: rotateY(0deg) translateZ(25px);
+}
+.back {
+  transform: rotateY(180deg) translateZ(25px);
+}
+.right {
+  transform: rotateY(90deg) translateZ(25px);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(25px);
+}
+.top {
+  transform: rotateX(90deg) translateZ(25px);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(25px);
+}
+
+@keyframes rotateDice {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  16% {
+    transform: rotateX(180deg) rotateY(-90deg);
+  }
+  33% {
+    transform: rotateX(90deg) rotateY(180deg);
+  }
+  50% {
+    transform: rotateX(270deg) rotateY(-90deg);
+  }
+  66% {
+    transform: rotateX(360deg) rotateY(180deg);
+  }
+  83% {
+    transform: rotateX(360deg) rotateY(270deg);
+  }
+  100% {
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+}
+</style>
+</head>
+<body>
+    <div class="scene">
+        <div class="cube">
+            <div class="face front"><img src="./img/1.png" alt="1" class="img"></div>
+            <div class="face back"><img src="./img/6.png" alt="6" class="img"></div>
+            <div class="face right"><img src="./img/3.png" alt="3" class="img"></div>
+            <div class="face left"><img src="./img/4.png" alt="4" class="img"></div>
+            <div class="face top"><img src="./img/5.png" alt="5" class="img"></div>
+            <div class="face bottom"><img src="./img/2.png" alt="2" class="img"></div>
+        </div>
+    </div>
+</body>
+</html>

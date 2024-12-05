@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+
+/* $imageIds: '1517021897933-0e0319cfbc28', '1533903345306-15d1c30952de', '1545243424-0ce743321e11', '1531306728370-e2ebd9d7bb99'; */
+
+:root {
+  --font-sans: 'Rubik', sans-serif;
+  --font-serif: 'Cardo', serif;
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-family: var(--font-sans);
+  height: 100%;
+  margin: 0;
+}
+
+.page-content {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  text-align: center;
+  background-color: whitesmoke;
+  color: whitesmoke;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 350px;
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: center;
+  transition: transform var(--d) var(--e);
+  pointer-events: none;
+}
+
+/* @each $id in $imageIds {
+  $i: index($imageIds, $id);
+  
+  .card:nth-child(#{$i}):before {
+    background-image: url(https://images.unsplash.com/photo-#{$id}?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  }
+} */
+
+.content {
+  z-index: 1;
+  position: relative;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.copy {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.btn {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  border: none;
+}

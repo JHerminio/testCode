@@ -1,0 +1,50 @@
+.button {
+  height: 50px;
+  width: 50px;
+  align-items: center;
+  text-align: center;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-button {
+  padding: 15px 30px;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Instagram Gradient */
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #f58529,
+    #dd2a7b,
+    #8134af,
+    #515bd4,
+    #3dc7ff 
+  );
+}
+
+/* Facebook Gradient */
+.facebook {
+  background: linear-gradient(
+    45deg,
+    #1877f2,
+    /* Facebook Blue */ #0d47a1 /* Darker Blue */
+  );
+}
+
+/* Twitter Gradient */
+.twitter {
+  background: linear-gradient(
+    45deg,
+    #1da1f2,
+    /* Twitter Blue */ #0d8bf2 /* Darker Blue */
+  );
+}

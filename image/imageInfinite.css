@@ -1,0 +1,80 @@
+.imageInfinite {
+  width: 100%;
+  overflow: hidden;
+
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  animation: bannermove 25s linear infinite;
+}
+
+.imageInfinite ul {
+  display: flex;
+  background: transparent;
+  list-style-type: none;
+}
+
+.imageInfinite li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.imageInfinite img {
+  display: flex;
+  width: 90%;
+  border: 2px solid #d9a937;
+  border-radius: 5px;
+}
+
+.div {
+  display: flex;
+  margin-left: -40px;
+}
+
+@keyframes bannermove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.slideMove {
+  overflow: hidden;
+  width: 100%;
+  background-color: red;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  
+}
+
+.slideMove ul {
+  display: flex;
+  background: transparent;
+  list-style-type: none;
+
+}
+
+.slideMove li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.slideMove p {
+  animation: slideMove 15s linear infinite;
+}
+@keyframes slideMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

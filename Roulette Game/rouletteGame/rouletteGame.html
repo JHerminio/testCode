@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette Game</title>
+    <link rel="stylesheet" href="rouletteGame.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="left-section">
+            <h2>Manual</h2>
+            <div class="bet-amount">
+                <label for="bet">Bet Amount:</label>
+                <input type="number" id="bet" value="5.00">
+                <div class="bet-buttons">
+                    <button>1/2</button>
+                    <button>2x</button>
+                    <button>Max</button>
+                </div>
+            </div>
+            <div class="color-section">
+                <h3>Color</h3>
+                <button class="color-button black">Black</button>
+                <button class="color-button red">Red</button>
+                <button class="color-button green">Green</button>
+            </div>
+            <button class="price-bet-btn">Price Bet</button>
+            <div class="players-section">
+                <h3>22 Players</h3>
+                <ul class="player-list">
+                    <li>Wade Warren - 0.645 BTC</li>
+                    <li>Esther Howard - 0.645 BTC</li>
+                    <li>Jenny Wilson - 0.645 BTC</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="wheel-section">
+            <h1 class="multiplier">55.52</h1>
+            <p>Price your bets</p>
+            <div class="wheel">
+                <!-- Create the wheel structure here -->
+            </div>
+            <button class="spin-btn">Spin Now</button>
+        </div>
+    </div>
+
+    <script src="rouletteGame.js"></script>
+</body>
+</html>
