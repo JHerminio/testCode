@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #search-container {
+      margin-bottom: 20px;
+    }
+    #search-input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .menu-item {
+      padding: 10px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .menu-item.hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="search-container">
+    <input
+      type="text"
+      id="search-input"
+      placeholder="Search menu items..."
+      oninput="filterMenu()"
+    />
+  </div>
+  <div id="menu">
+    <div class="menu-item">Home</div>
+    <div class="menu-item">About</div>
+    <div class="menu-item">Services</div>
+    <div class="menu-item">Contact</div>
+    <div class="menu-item">Blog</div>
+  </div>
+
+  <script>
+    function filterMenu() {
+      const query = document.getElementById("search-input").value.toLowerCase();
+      const items = document.querySelectorAll(".menu-item");
+
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(query)) {
+          item.classList.remove("hidden");
+        } else {
+          item.classList.add("hidden");
+        }
+      });
+    }
+  </script>
+</body>
+</html>
