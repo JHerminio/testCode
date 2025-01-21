@@ -22,3 +22,28 @@
     transform: translateX(-100%); 
   } */
 }
+
+.scrolling-text {
+  background: linear-gradient(
+    129deg,
+    #b31e65,
+    #925a72,
+    #eb05ba,
+    #3d1eae,
+    #ff00a2
+  );
+  background-size: 300% 300%;
+  animation: gradient-animation 20s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
