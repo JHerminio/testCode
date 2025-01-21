@@ -1,0 +1,35 @@
+.email-form {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.email-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.email-form input,
+.email-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.email-form button {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.email-form button:hover {
+  background-color: #0056b3;
+}
