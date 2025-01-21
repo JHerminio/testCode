@@ -1,0 +1,24 @@
+/* CSS included for convenience */
+.scrolling-text {
+  width: 100%;
+  overflow: hidden; /* Hides overflow content */
+  white-space: nowrap; /* Prevents text wrapping */
+  box-sizing: border-box;
+  animation: scroll-left 1s linear infinite; /* Infinite scrolling animation */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateY(100%); /* Start off-screen to the right */
+  }
+  100% {
+    transform: translateY(-100%); /* Move off-screen to the left */
+  }
+
+  /* 0% {
+    transform: translateX(100%); 
+  }
+  100% {
+    transform: translateX(-100%); 
+  } */
+}
